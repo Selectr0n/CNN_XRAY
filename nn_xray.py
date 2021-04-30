@@ -27,7 +27,7 @@ tensorboard = TensorBoard(log_dir="logs/{}".format(NAME))
 DATADIR = "data/"
 CATEGORIES = ["hand", "skull"]
 
-IMG_SIZE = 50
+IMG_SIZE = 100
 
 training_data = []
 
@@ -95,4 +95,4 @@ model.compile(loss='binary_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 
-model.fit(X, y, batch_size=32, epochs=5, validation_split=0.3, callbacks=[tensorboard])
+model.fit(X, y, batch_size=32, epochs=20, validation_split=0.3, callbacks=[tensorboard])
